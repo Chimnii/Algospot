@@ -1,1 +1,2 @@
 # Algospot
+for coding practice
