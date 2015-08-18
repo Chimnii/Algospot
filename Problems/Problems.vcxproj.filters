@@ -214,5 +214,11 @@
     <ClCompile Include="ZeroOne.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="CSBaseBall.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Moon.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
