@@ -220,5 +220,8 @@
     <ClCompile Include="Moon.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="The100YearsWar.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
