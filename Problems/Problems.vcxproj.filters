@@ -227,7 +227,10 @@
       <Filter>Solved</Filter>
     </ClCompile>
     <ClCompile Include="Allergy.cpp">
-      <Filter>Solving</Filter>
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Dictionary.cpp">
+      <Filter>Solved</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
