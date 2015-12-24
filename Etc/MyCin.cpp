@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string>
 
 namespace my
 {
@@ -56,6 +57,14 @@ namespace my
 	{
 		char c;
 		while( c = getchar() ){ if( is_char(c) ){ out = c; break; } }
+		return in;
+	}
+
+	inline istream& operator>>( istream&in, std::string& out )
+	{
+		static char temp[32];
+		operator>>( in, temp );
+		out = temp;
 		return in;
 	}
 

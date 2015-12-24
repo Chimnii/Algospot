@@ -226,5 +226,8 @@
     <ClCompile Include="BookStore.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="Allergy.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
