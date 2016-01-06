@@ -232,5 +232,8 @@
     <ClCompile Include="Dictionary.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="MatchOrder.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
