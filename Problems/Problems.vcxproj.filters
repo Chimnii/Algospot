@@ -235,5 +235,11 @@
     <ClCompile Include="MatchOrder.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="Yulo.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Ites.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
