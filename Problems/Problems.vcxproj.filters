@@ -247,5 +247,8 @@
     <ClCompile Include="Fix.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
