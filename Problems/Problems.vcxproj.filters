@@ -239,7 +239,13 @@
       <Filter>Solved</Filter>
     </ClCompile>
     <ClCompile Include="Ites.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="WordChain.cpp">
       <Filter>Solving</Filter>
+    </ClCompile>
+    <ClCompile Include="Fix.cpp">
+      <Filter>Solved</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
