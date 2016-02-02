@@ -250,5 +250,11 @@
     <ClCompile Include="Move.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
+    <ClCompile Include="Ordering.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Traversal.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
