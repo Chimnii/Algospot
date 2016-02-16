@@ -241,9 +241,6 @@
     <ClCompile Include="Ites.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
-    <ClCompile Include="WordChain.cpp">
-      <Filter>Solving</Filter>
-    </ClCompile>
     <ClCompile Include="Fix.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
@@ -254,6 +251,15 @@
       <Filter>Solved</Filter>
     </ClCompile>
     <ClCompile Include="Traversal.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Darpa.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
+    <ClCompile Include="WordChain.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
+    <ClCompile Include="CaveMan.cpp">
       <Filter>Solved</Filter>
     </ClCompile>
   </ItemGroup>
