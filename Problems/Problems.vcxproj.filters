@@ -8,6 +8,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Kriiicon4">
+      <UniqueIdentifier>{c4f90f98-640d-4e7e-9b25-b25410ec8d2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Anagram.cpp">
@@ -261,6 +264,27 @@
     </ClCompile>
     <ClCompile Include="CaveMan.cpp">
       <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Fortress.cpp">
+      <Filter>Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Kriiicon4\1.cpp">
+      <Filter>Kriiicon4</Filter>
+    </ClCompile>
+    <ClCompile Include="Kriiicon4\10.cpp">
+      <Filter>Kriiicon4</Filter>
+    </ClCompile>
+    <ClCompile Include="Kriiicon4\11.cpp">
+      <Filter>Kriiicon4</Filter>
+    </ClCompile>
+    <ClCompile Include="Kriiicon4\Prac-A.cpp">
+      <Filter>Kriiicon4</Filter>
+    </ClCompile>
+    <ClCompile Include="Kriiicon4\Prac-B.cpp">
+      <Filter>Kriiicon4</Filter>
+    </ClCompile>
+    <ClCompile Include="Kriiicon4\Prac-C.cpp">
+      <Filter>Kriiicon4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
