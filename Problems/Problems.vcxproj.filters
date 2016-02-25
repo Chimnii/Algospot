@@ -286,5 +286,8 @@
     <ClCompile Include="Kriiicon4\Prac-C.cpp">
       <Filter>Kriiicon4</Filter>
     </ClCompile>
+    <ClCompile Include="SortGame.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
