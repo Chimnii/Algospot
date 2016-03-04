@@ -4,257 +4,260 @@
     <Filter Include="Solving">
       <UniqueIdentifier>{d0c00221-3598-4c09-8037-9205f09ac82d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Solved">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Kriiicon4">
       <UniqueIdentifier>{c4f90f98-640d-4e7e-9b25-b25410ec8d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Baekjoon">
+      <UniqueIdentifier>{961a47f4-9baa-4291-abee-94e1e789921e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algospot">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Anagram.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Arctic.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="AsymTiling.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Avoid.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="BlockGame.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="BoardCover.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Boggle.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Brackets2.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="BraveDuck.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="ClockSync.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="CoinChange.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Concert.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Convert.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="DiamondPath.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Dolls.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Dragon.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="DrawRect.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Encrypt.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Endian.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Fence.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Festival.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="FixParen.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="HammingCode.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="HelloWorld.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="HotSummer.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="JLIS.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Josephus.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="JumpGame.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="KLIS.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Koogle.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Lecture.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="LIS.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="LunchBox.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="MaxSum.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Meeting.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Mercy.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Mispell.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="MMRect1.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Morse.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="NQueen.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Numb3rs.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="NumberGame.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Packing.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Pi.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Picnic.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Poly.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Prefix.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="QuadTree.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Quantize.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Ratio.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Routing.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Sentence.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Shisensho.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Snail.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="StrJoin.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Sushi.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Tictactoe.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Tiling2.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="TrianglePath.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="TriPathCnt.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="TSP1.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="URI.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="WeeklyCalendar.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Weird.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Wildcard.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Xhaeneung.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="ZeroOne.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="CSBaseBall.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Moon.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="The100YearsWar.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="BookStore.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Allergy.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Dictionary.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="MatchOrder.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Yulo.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Ites.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Fix.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Move.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Ordering.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Traversal.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Darpa.cpp">
       <Filter>Solving</Filter>
@@ -263,10 +266,10 @@
       <Filter>Solving</Filter>
     </ClCompile>
     <ClCompile Include="CaveMan.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Fortress.cpp">
-      <Filter>Solved</Filter>
+      <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Kriiicon4\1.cpp">
       <Filter>Kriiicon4</Filter>
@@ -287,6 +290,12 @@
       <Filter>Kriiicon4</Filter>
     </ClCompile>
     <ClCompile Include="SortGame.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
+    <ClCompile Include="Baekjoon\1912-연속합.cpp">
+      <Filter>Baekjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="Baekjoon\1168-Josephus2.cpp">
       <Filter>Solving</Filter>
     </ClCompile>
   </ItemGroup>
