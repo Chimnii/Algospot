@@ -298,5 +298,11 @@
     <ClCompile Include="Baekjoon\1168-Josephus2.cpp">
       <Filter>Solving</Filter>
     </ClCompile>
+    <ClCompile Include="Mordor.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicPower.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
