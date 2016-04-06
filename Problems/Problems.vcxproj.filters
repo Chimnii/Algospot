@@ -304,5 +304,8 @@
     <ClCompile Include="MagicPower.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="BruteForce.cpp">
+      <Filter>Solving</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
