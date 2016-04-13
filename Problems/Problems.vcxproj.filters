@@ -305,6 +305,9 @@
       <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="BruteForce.cpp">
+      <Filter>Kriiicon4</Filter>
+    </ClCompile>
+    <ClCompile Include="Nerd2.cpp">
       <Filter>Solving</Filter>
     </ClCompile>
   </ItemGroup>
