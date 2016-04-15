@@ -311,6 +311,9 @@
       <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Brave.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
       <Filter>Solving</Filter>
     </ClCompile>
   </ItemGroup>
