@@ -3,8 +3,23 @@
 
 namespace my
 {
+#ifdef __GNUC__
+#define getchar getchar_unlocked
+#endif
+
 	struct istream{};
 	istream cin;
+
+	/*
+	inline bool is_num( char c ){ return ( c >= '0' && c <= '9' ); }
+	inline istream& operator>>( istream& in, int& out )
+	{
+		char c; out = 0;
+		while( c = getchar() ){ if( is_num(c) ){ out += (c-'0'); break; } }
+		while( c = getchar() ){ if( !is_num(c) ) break; out *= 10; out += (c-'0'); }
+		return in;
+	}
+	*/
 
 	inline bool is_num( char c ){ return ( c >= '0' && c <= '9' ); }
 	inline bool is_negative( char c ){ return c == '-'; }

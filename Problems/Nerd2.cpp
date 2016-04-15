@@ -2,9 +2,12 @@
 #include <map>
 #include <functional>
 
-//#define getchar getchar_unlocked
 namespace my
 {
+#ifdef __GNUC__
+#define getchar getchar_unlocked
+#endif
+
 	struct istream{};
 	istream cin;
 

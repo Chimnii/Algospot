@@ -308,6 +308,9 @@
       <Filter>Kriiicon4</Filter>
     </ClCompile>
     <ClCompile Include="Nerd2.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Brave.cpp">
       <Filter>Solving</Filter>
     </ClCompile>
   </ItemGroup>
