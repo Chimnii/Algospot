@@ -314,7 +314,13 @@
       <Filter>Algospot</Filter>
     </ClCompile>
     <ClCompile Include="Fire.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Gallery.cpp">
       <Filter>Solving</Filter>
+    </ClCompile>
+    <ClCompile Include="RunningMedian.cpp">
+      <Filter>Algospot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
