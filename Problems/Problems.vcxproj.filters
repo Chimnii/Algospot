@@ -322,5 +322,8 @@
     <ClCompile Include="RunningMedian.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="Dict.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
