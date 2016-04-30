@@ -328,5 +328,11 @@
     <ClCompile Include="Note.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="Divis.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorWars.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
