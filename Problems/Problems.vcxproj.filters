@@ -14,6 +14,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="HackerCup">
+      <UniqueIdentifier>{5bd43520-4935-42a6-a662-17e4091b64be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Anagram.cpp">
@@ -333,6 +336,42 @@
     </ClCompile>
     <ClCompile Include="EditorWars.cpp">
       <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="7808-Snups4-A.cpp">
+      <Filter>Baekjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="2094-Snups4-C.cpp">
+      <Filter>Baekjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="6200-Snups4-B.cpp">
+      <Filter>Baekjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="11921-0.1.cpp">
+      <Filter>Baekjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\ProgressPie.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\LazyLoading.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\FightingTheZombie.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\BeachUmbrellas.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\ManicMoving.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\PieProgress.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\FightingTheZombies.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\ChoiZombie.cpp">
+      <Filter>HackerCup</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
