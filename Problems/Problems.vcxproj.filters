@@ -17,6 +17,9 @@
     <Filter Include="HackerCup">
       <UniqueIdentifier>{5bd43520-4935-42a6-a662-17e4091b64be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CodeJam">
+      <UniqueIdentifier>{905ff48a-c82c-47ee-b617-6bca1e231ef9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Anagram.cpp">
@@ -370,8 +373,20 @@
     <ClCompile Include="HackerCup\FightingTheZombies.cpp">
       <Filter>HackerCup</Filter>
     </ClCompile>
-    <ClCompile Include="HackerCup\ChoiZombie.cpp">
+    <ClCompile Include="HackerCup\Practice.cpp">
       <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerCup\BigTop.cpp">
+      <Filter>HackerCup</Filter>
+    </ClCompile>
+    <ClCompile Include="Insertion.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeJam\TidyNumbers.cpp">
+      <Filter>CodeJam</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeJam\BathroomStalls.cpp">
+      <Filter>CodeJam</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
