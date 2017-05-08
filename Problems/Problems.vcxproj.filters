@@ -388,5 +388,20 @@
     <ClCompile Include="CodeJam\BathroomStalls.cpp">
       <Filter>CodeJam</Filter>
     </ClCompile>
+    <ClCompile Include="CodeJam\Ratatouille.cpp">
+      <Filter>CodeJam</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeJam\CruiseControl.cpp">
+      <Filter>CodeJam</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeJam\StableNeighbors.cpp">
+      <Filter>CodeJam</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeJam\AmpleSyrup.cpp">
+      <Filter>CodeJam</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeJam\ParentingPartnering.cpp">
+      <Filter>CodeJam</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

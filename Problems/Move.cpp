@@ -20,6 +20,94 @@ namespace my
 	}
 }
 
+
+namespace dijkstra
+{
+	class iedge
+	{
+	public:
+		virtual int dist() const = 0;
+		virtual int dest() const = 0;
+	};
+
+	class ivertex
+	{
+		class range_edges
+		{
+		public:
+			explicit range_edges(const ivertex& _v) : v(_v) {}
+			friend auto begin(const range_edges& er) { return er.v.begin(); }
+			friend auto end(const range_edges& er) { return er.v.end(); }
+			
+		private:
+			const ivertex& v;
+		};
+
+	public:
+		virtual const std::vector<iedge>::iterator begin() const = 0;
+		virtual const std::vector<iedge>::iterator end() const = 0;
+		virtual const range_edges edges() const { return range_edges(*this); }
+	};
+
+	std::vector<int> get_shortest_paths(const std::vector<dijkstra::ivertex>& vertices, int src, int dest)
+	{
+		std::vector<int> dists(vertices.size(), -1);
+		dists[src] = 0;
+
+		using pair = std::pair<int, int>;
+		std::priority_queue<pair, std::vector<pair>, std::greater<pair>> minv;
+		minv.emplace(0, src);
+		while (!minv.empty())
+		{
+			int dist = minv.top().first;
+			int curr = minv.top().second;
+			minv.pop();
+
+			if (dists[curr] <= dist)
+			{
+				continue;
+			}
+
+			if (curr == dest)
+			{
+				return dists;
+			}
+
+			for (auto& e : vertices[curr].edges())
+			{
+				int next_dist = dist + e.dist();
+				int next = e.dest();
+
+				if (dists[next] > next_dist)
+				{
+					dists[next] = next_dist;
+					minv.emplace(next_dist, next);
+				}
+			}
+		}
+
+		return dists;
+	}
+
+};
+
+class edge : dijkstra::iedge
+{
+public:
+	virtual int dist() const { return _dist; }
+	virtual int dest() const { return _dest; }
+private:
+	int _dist, _dest;
+};
+
+class vertex : dijkstra::ivertex
+{
+public:
+	virtual std::vector<dijkstra::iedge>::iterator begin() const { return edges.begin(}
+private:
+	std::vector<dijkstra::iedge> edges;
+};
+
 typedef std::pair<int,int> pair;
 
 int num_city, num_road;
