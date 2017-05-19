@@ -1,133 +1,119 @@
-#include <stdio.h>
+#include <cstdio>
 #include <vector>
 #include <set>
 
-namespace my
+using std::set;
+using std::vector;
+
+struct gallery
 {
-#ifdef __GNUC__
-#define getchar getchar_unlocked
+	set<int> halls;
+	bool monitored = false;
+	bool erased = false;
+	bool is_leaf() { return halls.size() <= 1; }
+};
+
+int calc_min_camera(vector<gallery>& galleries);
+int main()
+{
+#ifdef FILEINPUT
+	FILE *fin;
+	freopen_s(&fin, "input.txt", "r", stdin);
 #endif
 
-	struct istream{};
-	istream cin;
-
-	inline bool is_num( char c ){ return ( c >= '0' && c <= '9' ); }
-	inline istream& operator>>( istream& in, int& out )
-	{
-		char c; out = 0;
-		while( c = getchar() ){ if( is_num(c) ){ out += (c-'0'); break; } }
-		while( c = getchar() ){ if( !is_num(c) ) break; out *= 10; out += (c-'0'); }
-		return in;
-	}
-}
-
-int jumps[1000];
-bool checked[1000];
-std::set<int> adjs[1000];
-
-int calc_camera( int num_gallery );
-int main( int argc, char** argv )
-{
 	int num_testcase;
-	my::cin >> num_testcase;
+	scanf("%d\n", &num_testcase);
 
-	while( num_testcase-- )
+	while (num_testcase--)
 	{
-		int num_gallery, num_edge;
-		my::cin >> num_gallery >> num_edge;
+		int num_gallery, num_hall;
+		scanf("%d %d\n", &num_gallery, &num_hall);
 
-		for( int i = 0; i < num_gallery; ++i )
+		vector<gallery> galleries(num_gallery);
+		for (int i = 0; i < num_hall; ++i)
 		{
-			jumps[i] = i+1;
-			checked[i] = false;
-			adjs[i].clear();
-		}
-		jumps[num_gallery-1] = 0;
-
-		for( int i = 0; i < num_edge; ++i )
-		{
-			int gal1, gal2;
-			my::cin >> gal1 >> gal2;
-			adjs[gal1].insert(gal2);
-			adjs[gal2].insert(gal1);
+			int g1, g2;
+			scanf("%d %d\n", &g1, &g2);
+			galleries[g1].halls.emplace(g2);
+			galleries[g2].halls.emplace(g1);
 		}
 
-		int minimum_cam = calc_camera(num_gallery);
-		printf("%d\n", minimum_cam);
+		int min_camera = calc_min_camera(galleries);
+		printf("%d\n", min_camera);
 	}
 
 	return 0;
 }
 
-void remove_gallery( int target )
+void erase(vector<gallery>& galleries, int g)
 {
-	for( int next : adjs[target] )
+	for (int n : galleries[g].halls)
 	{
-		adjs[next].erase(target);
+		galleries[n].halls.erase(g);
+	}
+	galleries[g].halls.clear();
+	galleries[g].erased = true;
+}
+
+void monitor(vector<gallery>& galleries, int g)
+{
+	galleries[g].monitored = true;
+	for (int n : galleries[g].halls)
+	{
+		galleries[n].monitored = true;
 	}
 }
 
-int set_camera( int target )
+int monitor_leaf(vector<gallery>& galleries, int g)
 {
-	int check = 0;
-	for( int next : adjs[target] )
+	int camera = 0;
+
+	if (galleries[g].halls.size() == 0)
 	{
-		adjs[next].erase(target);
-		if( adjs[next].size() == 1 )
+		if (!galleries[g].monitored)
+			++camera;
+		erase(galleries, g);
+	}
+	else if(galleries[g].halls.size() == 1)
+	{
+		int p = *galleries[g].halls.begin();
+
+		if (!galleries[g].monitored)
 		{
-			remove_gallery(next);
+			++camera;
+			monitor(galleries, p);
 		}
-		if( !checked[next] )
+		erase(galleries, g);
+
+		if (galleries[p].is_leaf())
 		{
-			checked[next] = true;
-			++check;
+			camera += monitor_leaf(galleries, p);
 		}
 	}
-	adjs[target].clear();
-
-	if( !checked[target] )
+	else
 	{
-		checked[target] = true;
-		++check;
+		printf("error\n");
+		camera = 0;
 	}
 
-	return check;
+	return camera;
 }
 
-int calc_camera( int num_gallery )
+int calc_min_camera(vector<gallery>& galleries)
 {
-	int camera_count = 0;
-	int remain_gallery = num_gallery;
+	int camera = 0;
 
-	int prev = num_gallery-1, current = 0;
-	while(remain_gallery)
+	int size = static_cast<int>(galleries.size());
+	for (int g = 0; g < size; ++g)
 	{
-		if( checked[current] )
-		{
-			current = jumps[current];
+		if (galleries[g].erased)
 			continue;
-		}
-		else
-		{
-			jumps[prev] = current;
-			prev = current;
-		}
 
-		if( adjs[current].size() == 0 )
+		if (galleries[g].is_leaf())
 		{
-			checked[current] = true;
-			--remain_gallery;
-			++camera_count;
+			camera += monitor_leaf(galleries, g);
 		}
-		else if( adjs[current].size() == 1 )
-		{
-			int next = *adjs[current].begin();
-			remain_gallery -= set_camera(next);
-			++camera_count;
-		}
-
-		current = jumps[current];
 	}
-
-	return camera_count;
+	
+	return camera;
 }

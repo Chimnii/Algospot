@@ -1,103 +1,137 @@
-#include <stdio.h>
+#include <cstdio>
 #include <string>
 #include <vector>
+#include <map>
 
-namespace my
+using std::vector;
+using std::string;
+using std::map;
+
+struct letter
 {
-	struct istream{};
-	istream cin;
+	vector<string> in, out;
+	vector<bool> in_visited, out_visited;
+};
 
-	inline bool is_num( char c ){ return ( c >= '0' && c <= '9' ); }
-	inline bool is_negative( char c ){ return c == '-'; }
-	inline istream& operator>>( istream& in, int& out )
-	{
-		char c; out = 0; bool neg = false;
-		while( c = getchar() ){ if( is_negative(c) ){ neg = true; break; } if( is_num(c) ){ out += (c-'0'); break; } }
-		while( c = getchar() ){ if( !is_num(c) ) break; out *= 10; out += (c-'0'); }
-		if( neg ) out *= -1;
-		return in;
-	}
+inline char first(const string& s) { return s[0]; }
+inline char last(const string& s) { return s[s.size() - 1]; }
 
-	inline bool is_char( char c ){ return ( c > ' '  ); }
-	inline istream& operator>>( istream& in, char* out )
-	{
-		char c;
-		while( c = getchar() ){ if( is_char(c) ){ *out = c; ++out; break; } }
-		while( c = getchar() ){ if( !is_char(c) ) break; *out = c; ++out; }
-		*out = 0;
-		return in;
-	}
-
-	inline istream& operator>>( istream&in, std::string& out )
-	{
-		static char temp[32];
-		operator>>( in, temp );
-		out = temp;
-		return in;
-	}
-}
-
-int num_word;
-
-struct node
+bool get_trail(map<char, letter>& letters, vector<string>& trails);
+int main()
 {
-	std::string word;
-	std::vector<node*> prevs, nexts;
-} nodes[100];
+#ifdef FILEINPUT
+	FILE *fin;
+	freopen_s(&fin, "input.txt", "r", stdin);
+#endif
 
-int main( int argc, char** argv )
-{
 	int num_testcase;
-	my::cin >> num_testcase;
+	scanf("%d\n", &num_testcase);
 
-	while( num_testcase-- )
+	while (num_testcase--)
 	{
-		my::cin >> num_word;
-		for( int i = 0; i < num_word; ++i )
+		int num_word;
+		scanf("%d\n", &num_word);
+		
+		map<char, letter> letters;
+		for (int i = 0; i < num_word; ++i)
 		{
-			my::cin >> nodes[i].word;
-			nodes[i].prevs.clear();
-			nodes[i].nexts.clear();
+			char wordbuffer[11];
+			scanf("%s", wordbuffer);
+			string word(wordbuffer);
+
+			letters[first(word)].out.emplace_back(word);
+			letters[first(word)].out_visited.emplace_back(false);
+			letters[last(word)].in.emplace_back(word);
+			letters[last(word)].in_visited.emplace_back(false);
 		}
 
-		for( int i = 0; i < num_word; ++i )
+		vector<string> trails;
+		if (get_trail(letters, trails))
 		{
-			for( int j = i+1; j < num_word; ++j )
+			for (auto& w : trails)
 			{
-				if( i == j )
-					continue;
-
-				if( *nodes[i].word.rbegin() == *nodes[j].word.begin() )
-				{
-					nodes[i].nexts.push_back(&nodes[j]);
-					nodes[j].prevs.push_back(&nodes[i]);
-				}
-				if( *nodes[i].word.begin() == *nodes[j].word.rbegin() )
-				{
-					nodes[i].prevs.push_back(&nodes[j]);
-					nodes[j].nexts.push_back(&nodes[i]);
-				}
+				printf("%s ", w.c_str());
 			}
+			printf("\n");
 		}
-
-		printf("IMPOSSIBLE\n");
+		else
+		{
+			printf("IMPOSSIBLE\n");
+		}
 	}
 
 	return 0;
 }
 
-/*
-100
-4
-dog
-god
-dragon
-need
-3
-aa
-ab
-bb
-2
-ab
-cd
-*/
+bool get_start(map<char, letter>& letters, char& start)
+{
+	char s = 0, f = 0;
+	for (auto& l : letters)
+	{
+		if (l.second.in.size() == l.second.out.size() + 1)
+		{
+			if (f != 0)
+				return false;
+
+			f = l.first;
+		}
+		else if(l.second.in.size() + 1 == l.second.out.size())
+		{
+			if (s != 0)
+				return false;
+			s = l.first;
+		}
+		else if(l.second.in.size() != l.second.out.size())
+		{
+			return false;
+		}
+	}
+
+	if (s == 0 && f ==0)
+	{
+		start = letters.begin()->first;
+		return true;
+	}
+	else if(s != 0 && f !=0)
+	{
+		start = s;
+		return true;
+	}
+
+	return false;
+}
+
+void get_circuit(map<char, letter>& letters, vector<string>& trails, char start)
+{
+	auto& l = letters[start];
+
+	vector<string> circuit;
+	for (size_t i = 0; i < l.out.size(); ++i)
+	{
+		if (!l.out_visited[i])
+		{
+			l.out_visited[i] = true;
+
+			vector<string> new_circuit;
+			new_circuit.emplace_back(l.out[i]);
+			get_circuit(letters, new_circuit, last(l.out[i]));
+
+			circuit.insert(circuit.begin(), new_circuit.begin(), new_circuit.end());
+		}
+	}
+
+	trails.insert(trails.end(), circuit.begin(), circuit.end());
+}
+
+bool get_trail(map<char, letter>& letters, vector<string>& trails)
+{
+	char start;
+	if (!get_start(letters, start))
+	{
+		return false;
+	}
+
+	get_circuit(letters, trails, start);
+
+	return true;
+}
