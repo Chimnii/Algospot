@@ -8,7 +8,7 @@ using std::make_pair;
 using std::vector;
 using std::priority_queue;
 
-int calc_minimum_distance(const vector<pair<bool, vector<pair<int, int>>>>& spots, const int begin);
+void calc_minimum_distance(const vector<vector<pair<int, int>>>& spots, const vector<int>& begins, vector<int>& dists);
 int main()
 {
 #ifdef FILEINPUT
@@ -24,13 +24,13 @@ int main()
 		int num_spot, num_road, num_firedspot, num_firestation;
 		scanf("%d %d %d %d\n", &num_spot, &num_road, &num_firedspot, &num_firestation);
 
-		vector<pair<bool, vector<pair<int, int>>>> spots(num_spot + 1, make_pair(false, vector<pair<int, int>>()));
+		vector<vector<pair<int, int>>> spots(num_spot + 1);
 		for (int i = 0; i < num_road; ++i)
 		{
 			int s, e, d;
 			scanf("%d %d %d", &s, &e, &d);
-			spots[s].second.emplace_back(make_pair(d, e));
-			spots[e].second.emplace_back(make_pair(d, s));
+			spots[s].emplace_back(make_pair(d, e));
+			spots[e].emplace_back(make_pair(d, s));
 		}
 		vector<int> firedspots;
 		for (int i = 0; i < num_firedspot; ++i)
@@ -39,17 +39,21 @@ int main()
 			scanf("%d", &spot);
 			firedspots.emplace_back(spot);
 		}
+		vector<int> firestations;
 		for (int i = 0; i < num_firestation; ++i)
 		{
 			int station;
 			scanf("%d", &station);
-			spots[station].first = true;
+			firestations.emplace_back(station);
 		}
+
+		vector<int> dists(spots.size(), -1);
+		calc_minimum_distance(spots, firestations, dists);
 
 		int total_dist = 0;
 		for (int fs : firedspots)
 		{
-			total_dist += calc_minimum_distance(spots, fs);
+			total_dist += dists[fs];
 		}
 		printf("%d\n", total_dist);
 	}
@@ -57,13 +61,14 @@ int main()
 	return 0;
 }
 
-int calc_minimum_distance(const vector<pair<bool, vector<pair<int, int>>>>& spots, const int begin)
+void calc_minimum_distance(const vector<vector<pair<int, int>>>& spots, const vector<int>& begins, vector<int>& dists)
 {
-	vector<int> dists(spots.size(), -1);
-
 	priority_queue<pair<int, int>, vector<pair<int, int>>, std::greater<pair<int, int>>> road_queue;
-	road_queue.emplace(make_pair(0, begin));
-	dists[begin] = 0;
+	for (int b : begins)
+	{
+		road_queue.emplace(make_pair(0, b));
+		dists[b] = 0;
+	}
 
 	while (!road_queue.empty())
 	{
@@ -75,10 +80,7 @@ int calc_minimum_distance(const vector<pair<bool, vector<pair<int, int>>>>& spot
 		if (current_dist > dists[current_spot])
 			continue;
 
-		if (spots[current_spot].first)
-			return dists[current_spot];
-
-		for (auto& road : spots[current_spot].second)
+		for (auto& road : spots[current_spot])
 		{
 			int next_dist = current_dist + road.first;
 			int next_spot = road.second;
@@ -89,6 +91,4 @@ int calc_minimum_distance(const vector<pair<bool, vector<pair<int, int>>>>& spot
 			}
 		}
 	}
-
-	return -1;
 }
