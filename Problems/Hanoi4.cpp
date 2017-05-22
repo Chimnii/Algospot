@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cmath>
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -58,17 +59,22 @@ int main()
 	return 0;
 }
 
+int sgn(int x) { if (!x) return 0; return x > 0 ? 1 : -1; }
+int incr(int x) { if (x < 0) return x-1; return x+1; }
+
 int states[1 << (max_disk * 2)];
 int calc_minimum_moving(const int num_disk, const int begin, const int end)
 {
-	std::fill(states, states + sizeof(states) / sizeof(int), -1);
+	std::fill(states, states + sizeof(states) / sizeof(int), 0);
 
 	if (begin == end)
 		return 0;
 	
 	queue<int> q;
 	q.emplace(begin);
-	states[begin] = 0;
+	q.emplace(end);
+	states[begin] = 1;
+	states[end] = -1;
 	while (!q.empty())
 	{
 		int current = q.front();
@@ -91,15 +97,14 @@ int calc_minimum_moving(const int num_disk, const int begin, const int end)
 					continue;
 
 				int next = set(current, top[i], j);
-				if (states[next] == -1)
+				if (states[next] == 0)
 				{
-					states[next] = states[current] + 1;
-					if (next == end)
-					{
-						return states[next];
-					}
-
+					states[next] = incr(states[current]);
 					q.emplace(next);
+				}
+				else if (sgn(states[next]) != sgn(states[current]))
+				{
+					return std::abs(states[next]) + std::abs(states[current]) - 1;
 				}
 			}
 		}
