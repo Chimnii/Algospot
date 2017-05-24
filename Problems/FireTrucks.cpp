@@ -4,7 +4,6 @@
 #include <functional>
 
 using std::pair;
-using std::make_pair;
 using std::vector;
 using std::priority_queue;
 
@@ -29,8 +28,8 @@ int main()
 		{
 			int s, e, d;
 			scanf("%d %d %d", &s, &e, &d);
-			spots[s].emplace_back(make_pair(d, e));
-			spots[e].emplace_back(make_pair(d, s));
+			spots[s].emplace_back(d, e);
+			spots[e].emplace_back(d, s);
 		}
 		vector<int> firedspots;
 		for (int i = 0; i < num_firedspot; ++i)
@@ -66,7 +65,7 @@ void calc_minimum_distance(const vector<vector<pair<int, int>>>& spots, const ve
 	priority_queue<pair<int, int>, vector<pair<int, int>>, std::greater<pair<int, int>>> road_queue;
 	for (int b : begins)
 	{
-		road_queue.emplace(make_pair(0, b));
+		road_queue.emplace(0, b);
 		dists[b] = 0;
 	}
 
@@ -87,7 +86,7 @@ void calc_minimum_distance(const vector<vector<pair<int, int>>>& spots, const ve
 			if (dists[next_spot] == -1 || next_dist < dists[next_spot])
 			{
 				dists[next_spot] = next_dist;
-				road_queue.emplace(make_pair(next_dist, next_spot));
+				road_queue.emplace(next_dist, next_spot);
 			}
 		}
 	}

@@ -415,5 +415,8 @@
     <ClCompile Include="FireTrucks.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="Nthlon.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
