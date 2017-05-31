@@ -418,5 +418,17 @@
     <ClCompile Include="Nthlon.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="TimeTrip.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Drunken.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Promises.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Baekjoon\9942-하노이의네탑.cpp">
+      <Filter>Baekjoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
