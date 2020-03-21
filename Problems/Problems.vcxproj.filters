@@ -430,5 +430,8 @@
     <ClCompile Include="Baekjoon\9942-하노이의네탑.cpp">
       <Filter>Baekjoon</Filter>
     </ClCompile>
+    <ClCompile Include="DrawRect_Re.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
