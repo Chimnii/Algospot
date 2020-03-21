@@ -433,5 +433,8 @@
     <ClCompile Include="DrawRect_Re.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="NQueen_Re.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
