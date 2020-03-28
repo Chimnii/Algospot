@@ -436,5 +436,11 @@
     <ClCompile Include="NQueen_Re.cpp">
       <Filter>Algospot</Filter>
     </ClCompile>
+    <ClCompile Include="HotSummer_Re.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Coins_Re.cpp">
+      <Filter>Algospot</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
