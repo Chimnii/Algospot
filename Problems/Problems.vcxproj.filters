@@ -20,6 +20,9 @@
     <Filter Include="CodeJam">
       <UniqueIdentifier>{905ff48a-c82c-47ee-b617-6bca1e231ef9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Programmers">
+      <UniqueIdentifier>{5b70730e-7538-4b73-b951-1b2ac9eea546}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Anagram.cpp">
@@ -441,6 +444,12 @@
     </ClCompile>
     <ClCompile Include="Coins_Re.cpp">
       <Filter>Algospot</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers\ProgrammersTest.cpp">
+      <Filter>Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers\172928.cpp">
+      <Filter>Programmers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
